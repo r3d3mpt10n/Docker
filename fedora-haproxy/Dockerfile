@@ -17,6 +17,7 @@ RUN chown -R haproxy.haproxy /etc/haproxy
 
 # Expose ports
 EXPOSE 3128 
+EXPOSE 8080
 
 # Set the default command to execute
 # when creating a new container
