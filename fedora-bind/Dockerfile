@@ -2,7 +2,8 @@
 FROM fedora
 
 # File Author / Maintainer
-MAINTAINER http://fedoraproject.org/wiki/Cloud
+MAINTAINER Shep
+
 RUN rm -f /etc/yum.repos.d/*.repo
 ADD fedora.repo /etc/yum.repos.d/
 ADD fedora-updates.repo /etc/yum.repos.d/
