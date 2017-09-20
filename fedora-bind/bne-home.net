@@ -1,0 +1,27 @@
+; bne-home.net
+$TTL 3600
+bne-home.net. IN     SOA    a.root-servers.net. admin@bne-home.net. (
+				2017092001  ; Serial
+				3H          ; refresh after 3 hours
+				1H          ; retry after 1 hour
+				1W          ; expire after 1 week
+				1D)         ; minimum TTL of 1 day
+
+	; Name Server
+	IN	NS	bne-server2.bne-home.net.
+
+	; Mail Exchanger
+	IN	MX	50 mx1.mail.com.	; Your Mail Server
+
+bne-server2		IN A		192.168.1.206
+www			IN CNAME	192.168.1.206
+wpad		        IN A            192.168.1.206 
+xps-laptop		IN A		192.168.1.17
+
+
+
+
+; Resource Record - veryfy the IP where your mails come from(disable if not needed)
+; @	IN TXT		"v=spf1 ip4:85.214.123.0/24 -all"
+
+; EOF

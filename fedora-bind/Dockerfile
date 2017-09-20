@@ -23,7 +23,9 @@ RUN chown named:named /etc/rndc.key
 ADD named.conf /etc/named.conf
 ADD zones.conf /etc/named/zones.conf
 ADD bne-home.net /var/named/zones/bne-home.net
-
+RUN chown named:named /etc/named/zones.conf
+RUN chown -R named:named /var/named
+RUN chown named:named /etc/named.conf
 # Expose ports
 EXPOSE 53
 
