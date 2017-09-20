@@ -2,7 +2,7 @@
 FROM fedora
 
 # File Author / Maintainer
-MAINTAINER http://fedoraproject.org/wiki/Cloud
+MAINTAINER Shep
 
 # Install Squid
 RUN dnf -y update && dnf clean all
